@@ -1,0 +1,43 @@
+﻿@model MyPorftolioProject.Models.Exprience
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Exprience</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Companyname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Companyname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Companyspecial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Companyspecial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Minidesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Minidesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

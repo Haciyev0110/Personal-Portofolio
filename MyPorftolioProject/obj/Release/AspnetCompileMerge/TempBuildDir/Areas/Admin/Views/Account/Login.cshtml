@@ -1,0 +1,52 @@
+﻿@model MyPorftolioProject.Models.Admins
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="~/Public/css/skins/Loggcss/Logcss.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center">
+            <div id="login-column" class="col-md-4">
+                <div class="login-box col-md-12">
+                    <h1>Admin Panel</h1>
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <form action="@Url.Action("Login","Account",FormMethod.Post)" method="post">
+                        <div class="form-group">
+                            <label name="Email"></label>
+                            <input name="Email" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label name="Password"></label>
+                            <input name="Password" class="form-control" type="password" />
+                        </div>
+                        <div class="forgot">
+
+                            <a href="reset.html">Forgot password?</a>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

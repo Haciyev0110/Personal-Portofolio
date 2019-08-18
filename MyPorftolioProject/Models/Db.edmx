@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DB_A4653D_panah01Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descriptions" Type="nvarchar" MaxLength="1000" />
+          <Property Name="Firstname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Lastname" Type="nvarchar" MaxLength="100" />
+          <Property Name="Birthday" Type="datetime" />
+          <Property Name="Natioanly" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="70" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="150" />
+          <Property Name="SpkenLang" Type="nvarchar" MaxLength="500" />
+          <Property Name="Image" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Adminname" Type="nvarchar" MaxLength="150" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Backskil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Education">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Univername" Type="nvarchar" MaxLength="300" />
+          <Property Name="Faculty" Type="nvarchar" MaxLength="250" />
+          <Property Name="Starttime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Endtime" Type="nvarchar" MaxLength="50" />
+          <Property Name="Minidesc" Type="nvarchar" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="Exprience">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Companyname" Type="nvarchar" MaxLength="150" />
+          <Property Name="Companyspecial" Type="nvarchar" MaxLength="150" />
+          <Property Name="Minidesc" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Frontskil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Porftilio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="255" />
+          <Property Name="Client" Type="nvarchar" MaxLength="100" />
+          <Property Name="Duation" Type="nvarchar" MaxLength="100" />
+          <Property Name="UsedTech" Type="nvarchar" MaxLength="700" />
+          <Property Name="LinlUrl" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="UserComment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="350" />
+          <Property Name="Useremail" Type="nvarchar" MaxLength="350" />
+          <Property Name="Usermessag" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <EntityContainer Name="DB_A4653D_panah01ModelStoreContainer">
+          <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Backskil" EntityType="Self.Backskil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Exprience" EntityType="Self.Exprience" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Frontskil" EntityType="Self.Frontskil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Porftilio" EntityType="Self.Porftilio" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserComment" EntityType="Self.UserComment" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DB_A4653D_panah01Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="About">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descriptions" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="Firstname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Lastname" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Birthday" Type="DateTime" Precision="3" />
+          <Property Name="Natioanly" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="SpkenLang" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Backskil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Education">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Univername" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Faculty" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Starttime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Endtime" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Minidesc" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Exprience">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Companyname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Companyspecial" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Minidesc" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Frontskil">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Porftilio">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Client" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Duation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UsedTech" Type="String" MaxLength="700" FixedLength="false" Unicode="true" />
+          <Property Name="LinlUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserComment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="Useremail" Type="String" MaxLength="350" FixedLength="false" Unicode="true" />
+          <Property Name="Usermessag" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DB_A4653D_panah01Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="About" EntityType="Self.About" />
+          <EntitySet Name="Backskil" EntityType="Self.Backskil" />
+          <EntitySet Name="Education" EntityType="Self.Education" />
+          <EntitySet Name="Exprience" EntityType="Self.Exprience" />
+          <EntitySet Name="Frontskil" EntityType="Self.Frontskil" />
+          <EntitySet Name="Porftilio" EntityType="Self.Porftilio" />
+          <EntitySet Name="UserComment" EntityType="Self.UserComment" />
+          <EntitySet Name="Admins" EntityType="DB_A4653D_panah01Model.Admins" />
+        </EntityContainer>
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Adminname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DB_A4653D_panah01ModelStoreContainer" CdmEntityContainer="DB_A4653D_panah01Entities">
+          <EntitySetMapping Name="About">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.About">
+              <MappingFragment StoreEntitySet="About">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+                <ScalarProperty Name="Natioanly" ColumnName="Natioanly" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SpkenLang" ColumnName="SpkenLang" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Backskil">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Backskil">
+              <MappingFragment StoreEntitySet="Backskil">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Education">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Education">
+              <MappingFragment StoreEntitySet="Education">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Univername" ColumnName="Univername" />
+                <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+                <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+                <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+                <ScalarProperty Name="Minidesc" ColumnName="Minidesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Exprience">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Exprience">
+              <MappingFragment StoreEntitySet="Exprience">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+                <ScalarProperty Name="Companyspecial" ColumnName="Companyspecial" />
+                <ScalarProperty Name="Minidesc" ColumnName="Minidesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Frontskil">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Frontskil">
+              <MappingFragment StoreEntitySet="Frontskil">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Porftilio">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Porftilio">
+              <MappingFragment StoreEntitySet="Porftilio">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Duation" ColumnName="Duation" />
+                <ScalarProperty Name="UsedTech" ColumnName="UsedTech" />
+                <ScalarProperty Name="LinlUrl" ColumnName="LinlUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserComment">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.UserComment">
+              <MappingFragment StoreEntitySet="UserComment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Useremail" ColumnName="Useremail" />
+                <ScalarProperty Name="Usermessag" ColumnName="Usermessag" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Admins">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Adminname" ColumnName="Adminname" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

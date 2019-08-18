@@ -1,0 +1,59 @@
+﻿@model MyPorftolioProject.Models.Porftilio
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Porftilio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Client)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Client)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsedTech)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsedTech)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LinlUrl)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LinlUrl)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

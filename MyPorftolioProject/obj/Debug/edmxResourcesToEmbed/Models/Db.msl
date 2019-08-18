@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_A4653D_panah01ModelStoreContainer" CdmEntityContainer="DB_A4653D_panah01Entities">
+    <EntitySetMapping Name="About">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.About">
+        <MappingFragment StoreEntitySet="About">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+          <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+          <ScalarProperty Name="Birthday" ColumnName="Birthday" />
+          <ScalarProperty Name="Natioanly" ColumnName="Natioanly" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SpkenLang" ColumnName="SpkenLang" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Backskil">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Backskil">
+        <MappingFragment StoreEntitySet="Backskil">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Education">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Education">
+        <MappingFragment StoreEntitySet="Education">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Univername" ColumnName="Univername" />
+          <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+          <ScalarProperty Name="Starttime" ColumnName="Starttime" />
+          <ScalarProperty Name="Endtime" ColumnName="Endtime" />
+          <ScalarProperty Name="Minidesc" ColumnName="Minidesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exprience">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Exprience">
+        <MappingFragment StoreEntitySet="Exprience">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+          <ScalarProperty Name="Companyspecial" ColumnName="Companyspecial" />
+          <ScalarProperty Name="Minidesc" ColumnName="Minidesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Frontskil">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Frontskil">
+        <MappingFragment StoreEntitySet="Frontskil">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Porftilio">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Porftilio">
+        <MappingFragment StoreEntitySet="Porftilio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Client" ColumnName="Client" />
+          <ScalarProperty Name="Duation" ColumnName="Duation" />
+          <ScalarProperty Name="UsedTech" ColumnName="UsedTech" />
+          <ScalarProperty Name="LinlUrl" ColumnName="LinlUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserComment">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.UserComment">
+        <MappingFragment StoreEntitySet="UserComment">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Useremail" ColumnName="Useremail" />
+          <ScalarProperty Name="Usermessag" ColumnName="Usermessag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="DB_A4653D_panah01Model.Admins">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adminname" ColumnName="Adminname" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

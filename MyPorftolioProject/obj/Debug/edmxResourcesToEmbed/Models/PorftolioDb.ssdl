@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="My_PorftolioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="About">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Firstname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Lastname" Type="nvarchar" MaxLength="100" />
+    <Property Name="Birthday" Type="datetime" />
+    <Property Name="Natioanly" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="70" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="150" />
+    <Property Name="SpkenLang" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Backskil">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Education">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Univername" Type="nvarchar" MaxLength="300" />
+    <Property Name="Faculty" Type="nvarchar" MaxLength="250" />
+    <Property Name="Starttime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Endtime" Type="nvarchar" MaxLength="50" />
+    <Property Name="Minidesc" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Exprience">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Companyname" Type="nvarchar" MaxLength="150" />
+    <Property Name="Companyspecial" Type="nvarchar" MaxLength="150" />
+    <Property Name="Minidesc" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Frontskil">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Porftilio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="255" />
+    <Property Name="Client" Type="nvarchar" MaxLength="100" />
+    <Property Name="Duation" Type="nvarchar" MaxLength="100" />
+    <Property Name="UsedTech" Type="nvarchar" MaxLength="700" />
+    <Property Name="LinlUrl" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="UserComment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="350" />
+    <Property Name="Useremail" Type="nvarchar" MaxLength="350" />
+    <Property Name="Usermessag" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
+  <EntityContainer Name="My_PorftolioModelStoreContainer">
+    <EntitySet Name="About" EntityType="Self.About" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Backskil" EntityType="Self.Backskil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Education" EntityType="Self.Education" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exprience" EntityType="Self.Exprience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Frontskil" EntityType="Self.Frontskil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Porftilio" EntityType="Self.Porftilio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserComment" EntityType="Self.UserComment" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
